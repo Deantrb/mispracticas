@@ -83,6 +83,7 @@ $(document).ready(function() {
             data: dataString,
             success: function(response) {
                 $(".text-danger").remove();
+                document.getElementById('frmRegistro').reset();
                 var data = JSON.parse(response);
                 if (data.success == true) {
                     $('#msg-data').html(data.messages);
